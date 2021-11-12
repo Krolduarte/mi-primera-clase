@@ -5,12 +5,16 @@ public class ClaseGimnasio{
 
     public ClaseGimnasio(String nombreDelCliente, int numeroDeClases, boolean tieneReserva){
         nombreCliente = nombreDelCliente;
-        clasesProgramadas = 0;
+        clasesProgramadas = numeroDeClases;
         conReserva = true;
     }
         
     public String getNombre(){
        return nombreCliente; 
+    }
+    
+    public void aumentarCantidadClases (int numeroDeClases){
+        clasesProgramadas = numeroDeClases + 1;
     }
     
     public int getNumeroDeClasesProgramadas(){
@@ -26,9 +30,7 @@ public class ClaseGimnasio{
         
     }
     
-    public void aumentarCantidadClases (int numeroDeClases){
-        clasesProgramadas = numeroDeClases + 1;
-    }
+    
     
     public void cambiarEstadoReserva(){
         conReserva = false;
