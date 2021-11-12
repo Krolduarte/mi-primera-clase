@@ -39,7 +39,11 @@ public class ClaseGimnasio{
     public void imprimeEstadoReserva(){
         System.out.println("En el momento, el cliente " + nombreCliente + " tiene reservada " + clasesProgramadas + " clases.");
     }
+    
+    public String getEstadoCompleto(){
         
+        return nombreCliente + " tiene "  + clasesProgramadas +  " clases programadas y " + "tiene reserva: " + conReserva;
+    }
     
  }
  
