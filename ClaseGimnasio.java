@@ -4,7 +4,7 @@ public class ClaseGimnasio{
     private boolean conReserva;
    
 
-    public ClaseGimnasio(String nombreDelCliente, int numeroDeClases, boolean tieneReserva){
+    public ClaseGimnasio(String nombreDelCliente, int numeroDeClases){
         nombreCliente = nombreDelCliente;
         clasesProgramadas = numeroDeClases;
         conReserva = true;
@@ -34,8 +34,13 @@ public class ClaseGimnasio{
         return conReserva;
     }
         
-    public void cancelarReserva(){
-        conReserva = false;
+    public void modificarEstadoReserva(){
+        if (conReserva ==true){
+            conReserva =false;
+        }
+        else{
+            conReserva= true;
+        }
     }
     
     public void imprimeTotalClasesReservadas(){
