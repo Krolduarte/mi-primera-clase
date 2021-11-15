@@ -2,27 +2,17 @@ public class ClaseGimnasio{
     private String nombreCliente;
     private int clasesProgramadas;
     private boolean conReserva;
+   
 
     public ClaseGimnasio(String nombreDelCliente, int numeroDeClases, boolean tieneReserva){
         nombreCliente = nombreDelCliente;
         clasesProgramadas = numeroDeClases;
         conReserva = true;
+        
     }
         
     public String getNombre(){
        return nombreCliente; 
-    }
-    
-    public void aumentarCantidadClases (int numeroDeClases){
-        clasesProgramadas = numeroDeClases + 1;
-    }
-    
-    public int getNumeroDeClasesProgramadas(){
-        return clasesProgramadas;
-    }
-    
-    public boolean getEstadoReserva(){
-        return conReserva;
     }
     
     public void setNombreCliente (String nombreDelCliente){
@@ -30,19 +20,37 @@ public class ClaseGimnasio{
         
     }
     
+    public void aumentarCantidadClases (){
+        clasesProgramadas = clasesProgramadas + 1;
+        System.out.println("Usted tiene " + clasesProgramadas + " clases programadas");
+        
+    }
     
+    public int getTotalDeClasesProgramadas(){
+        return clasesProgramadas;
+    }
     
-    public void cambiarEstadoReserva(){
+    public boolean getEstadoReserva(){
+        return conReserva;
+    }
+        
+    public void cancelarReserva(){
         conReserva = false;
     }
     
-    public void imprimeEstadoReserva(){
+    public void imprimeTotalClasesReservadas(){
         System.out.println("En el momento, el cliente " + nombreCliente + " tiene reservada " + clasesProgramadas + " clases.");
     }
     
-    public String getEstadoCompleto(){
-        
-        return nombreCliente + " tiene "  + clasesProgramadas +  " clases programadas y " + "tiene reserva: " + conReserva;
+    public String getEstadoCompletoDeReserva(){
+        String tieneReserva;
+        if (conReserva == true){
+            tieneReserva = "Si";
+        }
+        else{
+            tieneReserva = "No";
+        }
+        return "Cliente: " + nombreCliente + " Clases Programadas:  "  + clasesProgramadas + " . Tiene reserva: " + tieneReserva;
     }
     
  }
@@ -61,12 +69,12 @@ nombreCliente
 clasesProgramadas
 reserva
 
-El nombre de los métodos modificadores del segundo y tercer atributo.
+El nombre de los metodos modificadores del segundo y tercer atributo.
 
 aumentarCantidadClases
 reservar
 
-El nombre de los dos últimos métodos que se piden.
+El nombre de los dos ultimos metodos que se piden.
 
 GetEstadoReserva
 imprimeEstadoReserva
